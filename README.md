@@ -395,14 +395,6 @@ Folder: / (root)
 
 ---
 
-## 📄 License
-
-当前项目未指定开源许可证。
-
-如果准备正式发布到 GitHub，建议根据你的使用需求添加合适的 `LICENSE` 文件。
-
----
-
 <p align="center">
   Made with HTML · CSS · JavaScript · SVG
 </p>
