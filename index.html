@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="高三历次考试成绩趋势汇总" />
   <title>高三成绩趋势</title>
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,7 +16,9 @@
         <h1>高三历次成绩汇总</h1>
         <p>把每一次考试串联起来，直观看见自己的变化与趋势。</p>
       </div>
-      <div class="hero-meta" aria-label="统计信息">
+      <div class="hero-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">☾ 深色模式</button>
+        <div class="hero-meta" aria-label="统计信息">
         <div class="meta-item">
           <span id="examCount">0</span>
           <small>场考试</small>
@@ -24,6 +27,7 @@
         <div class="meta-item">
           <span id="latestScore">—</span>
           <small>最近总分</small>
+        </div>
         </div>
       </div>
     </header>
