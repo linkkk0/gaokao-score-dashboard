@@ -1,13 +1,18 @@
-# 高三成绩趋势 · Personal Academic Dashboard
+<p align="center">
+  <img src="./logo.png" alt="高三成绩趋势 Logo" width="160">
+</p>
 
-一个简洁、现代、无需前端框架的个人高三成绩可视化项目。
-
-它将每一次考试的 **日期、考试名称、总成绩与语文 / 数学 / 英语 / 物理 / 化学 / 生物六科成绩** 统一存储在 JSON 中，并通过 SVG 动态绘制成绩趋势折线图。同时提供一个独立的 JSON 成绩编辑器，用于日常添加、修改、删除和导出考试数据。
+<h1 align="center">高三成绩趋势 · Personal Academic Dashboard</h1>
 
 <p align="center">
-  <strong>纯 HTML + CSS + JavaScript + JSON</strong><br>
-  无需构建工具，无需数据库，适合个人成绩长期记录与展示。
+  一个简洁、现代、无需前端框架的个人高三成绩可视化与数据管理项目。
 </p>
+
+<p align="center">
+  <strong>纯 HTML + CSS + JavaScript + JSON</strong> · 无需构建工具 · 无需数据库
+</p>
+
+它将每一次考试的 **日期、考试名称、总成绩与语文 / 数学 / 英语 / 物理 / 化学 / 生物六科成绩** 统一存储在 JSON 中，并通过 SVG 动态绘制成绩趋势折线图。同时提供一个独立的 JSON 成绩编辑器，用于日常添加、修改、删除和导出考试数据。
 
 ---
 
@@ -76,6 +81,7 @@
 ├── editor.css                 # 编辑器样式
 ├── editor.js                  # 编辑器逻辑
 ├── theme.js                   # 深浅色主题与系统配色同步
+├── logo.png                   # 项目 Logo
 │
 └── README.md                  # 项目说明
 ```
