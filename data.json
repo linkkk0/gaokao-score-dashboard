@@ -1,0 +1,108 @@
+{
+  "exams": [
+    {
+      "date": "2026-03-08",
+      "exam": "高三第一次模拟考试",
+      "scores": {
+        "chinese": 118,
+        "math": 126,
+        "english": 121,
+        "physics": 84,
+        "chemistry": 88,
+        "biology": 86
+      },
+      "total": 623
+    },
+    {
+      "date": "2026-03-29",
+      "exam": "高三第二次月考",
+      "scores": {
+        "chinese": 121,
+        "math": 132,
+        "english": 125,
+        "physics": 87,
+        "chemistry": 91,
+        "biology": 88
+      },
+      "total": 644
+    },
+    {
+      "date": "2026-04-20",
+      "exam": "一模考试",
+      "scores": {
+        "chinese": 124,
+        "math": 136,
+        "english": 128,
+        "physics": 89,
+        "chemistry": 93,
+        "biology": 91
+      },
+      "total": 661
+    },
+    {
+      "date": "2026-05-11",
+      "exam": "高三五月联考",
+      "scores": {
+        "chinese": 126,
+        "math": 139,
+        "english": 130,
+        "physics": 92,
+        "chemistry": 95,
+        "biology": 93
+      },
+      "total": 675
+    },
+    {
+      "date": "2026-05-28",
+      "exam": "二模考试",
+      "scores": {
+        "chinese": 129,
+        "math": 142,
+        "english": 132,
+        "physics": 94,
+        "chemistry": 97,
+        "biology": 95
+      },
+      "total": 689
+    },
+    {
+      "date": "2026-06-15",
+      "exam": "高三六月适应性考试",
+      "scores": {
+        "chinese": 131,
+        "math": 145,
+        "english": 135,
+        "physics": 96,
+        "chemistry": 99,
+        "biology": 97
+      },
+      "total": 703
+    },
+    {
+      "date": "2026-06-28",
+      "exam": "三模考试",
+      "scores": {
+        "chinese": 133,
+        "math": 147,
+        "english": 136,
+        "physics": 98,
+        "chemistry": 100,
+        "biology": 98
+      },
+      "total": 712
+    },
+    {
+      "date": "2026-07-03",
+      "exam": "高考前最后一次模拟",
+      "scores": {
+        "chinese": 134,
+        "math": 149,
+        "english": 138,
+        "physics": 99,
+        "chemistry": 101,
+        "biology": 99
+      },
+      "total": 720
+    }
+  ]
+}

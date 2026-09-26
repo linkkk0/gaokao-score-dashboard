@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="高三成绩 JSON 数据编辑器" />
+  <title>高三成绩数据编辑器</title>
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">SENIOR THREE · SCORE EDITOR</span>
+        <h1>高三成绩数据编辑器</h1>
+        <p>直接编辑考试记录，完成后导出 JSON，再用于成绩趋势页面。</p>
+      </div>
+      <a class="back-link" href="index.html">查看成绩趋势 →</a>
+    </header>
+
+    <section class="toolbar panel">
+      <div class="toolbar-main">
+        <label class="file-button">
+          导入 JSON
+          <input id="importFile" type="file" accept=".json,application/json" />
+        </label>
+        <button id="exportButton" class="primary-button" type="button">导出 JSON</button>
+        <button id="addButton" class="secondary-button" type="button">＋ 添加考试</button>
+      </div>
+      <div class="toolbar-meta">
+        <span id="recordCount">0 场考试</span>
+        <span class="dot"></span>
+        <span id="statusText">等待数据</span>
+      </div>
+    </section>
+
+    <section class="editor-layout">
+      <div class="panel records-panel">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">EXAM RECORDS</span>
+            <h2>考试记录</h2>
+          </div>
+          <input id="searchInput" class="search-input" type="search" placeholder="搜索考试名称" />
+        </div>
+        <div id="recordList" class="record-list"></div>
+        <div id="emptyList" class="empty-state" hidden>
+          <strong>暂无考试数据</strong>
+          <span>可以导入现有 JSON，或者直接添加第一场考试。</span>
+        </div>
+      </div>
+
+      <div class="panel form-panel">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">EDIT RECORD</span>
+            <h2 id="formTitle">添加考试</h2>
+          </div>
+          <button id="deleteButton" class="danger-button" type="button" hidden>删除记录</button>
+        </div>
+
+        <form id="examForm" novalidate>
+          <div class="form-grid two-col">
+            <label class="field">
+              <span>考试日期</span>
+              <input id="dateInput" type="date" required />
+            </label>
+            <label class="field">
+              <span>考试名称</span>
+              <input id="examInput" type="text" maxlength="60" placeholder="例如：高三第一次月考" required />
+            </label>
+          </div>
+
+          <div class="score-section">
+            <div class="score-section-head">
+              <div>
+                <span class="section-kicker">SCORES</span>
+                <h3>各科成绩</h3>
+              </div>
+              <span class="score-hint">总分可自动计算，也可手动调整</span>
+            </div>
+
+            <div class="score-grid">
+              <label class="field score-field"><span>语文</span><input data-score="chinese" type="number" min="0" step="1" placeholder="0" required /></label>
+              <label class="field score-field"><span>数学</span><input data-score="math" type="number" min="0" step="1" placeholder="0" required /></label>
+              <label class="field score-field"><span>英语</span><input data-score="english" type="number" min="0" step="1" placeholder="0" required /></label>
+              <label class="field score-field"><span>物理</span><input data-score="physics" type="number" min="0" step="1" placeholder="0" required /></label>
+              <label class="field score-field"><span>化学</span><input data-score="chemistry" type="number" min="0" step="1" placeholder="0" required /></label>
+              <label class="field score-field"><span>生物</span><input data-score="biology" type="number" min="0" step="1" placeholder="0" required /></label>
+            </div>
+
+            <label class="field total-field">
+              <span>总成绩</span>
+              <div class="total-row">
+                <input id="totalInput" type="number" min="0" step="1" placeholder="自动计算" required />
+                <button id="recalcButton" class="icon-button" type="button" title="按六科成绩重新计算总分">自动计算</button>
+              </div>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button id="resetButton" class="secondary-button" type="button">重置</button>
+            <button class="primary-button" type="submit">保存记录</button>
+          </div>
+        </form>
+
+        <div class="json-tip">
+          <strong>数据格式</strong>
+          <span>编辑器导出的文件会保持 <code>{ "exams": [...] }</code> 结构，可无限追加考试记录。</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© 2026 高三成绩趋势 · Personal Academic Dashboard</footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="高三历次考试成绩趋势汇总" />
+  <title>高三成绩趋势</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">SENIOR THREE · SCORE TRACKER</span>
+        <h1>高三历次成绩汇总</h1>
+        <p>把每一次考试串联起来，直观看见自己的变化与趋势。</p>
+      </div>
+      <div class="hero-meta" aria-label="统计信息">
+        <div class="meta-item">
+          <span id="examCount">0</span>
+          <small>场考试</small>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span id="latestScore">—</span>
+          <small>最近总分</small>
+        </div>
+      </div>
+    </header>
+
+    <section class="dashboard-card" aria-label="成绩趋势图">
+      <nav class="subject-tabs" id="subjectTabs" role="tablist" aria-label="成绩维度">
+        <button class="tab active" data-key="total" role="tab" aria-selected="true">总成绩</button>
+        <button class="tab" data-key="chinese" role="tab" aria-selected="false">语文</button>
+        <button class="tab" data-key="math" role="tab" aria-selected="false">数学</button>
+        <button class="tab" data-key="english" role="tab" aria-selected="false">英语</button>
+        <button class="tab" data-key="physics" role="tab" aria-selected="false">物理</button>
+        <button class="tab" data-key="chemistry" role="tab" aria-selected="false">化学</button>
+        <button class="tab" data-key="biology" role="tab" aria-selected="false">生物</button>
+      </nav>
+
+      <div class="chart-header">
+        <div>
+          <div class="chart-title-row">
+            <h2 id="chartTitle">总成绩</h2>
+            <span class="chart-unit">分</span>
+          </div>
+          <p id="chartSubtitle">每场考试的总分变化趋势</p>
+        </div>
+        <div class="range-note" id="rangeNote">动态纵轴</div>
+      </div>
+
+      <div class="chart-wrap" id="chartWrap">
+        <svg id="scoreChart" role="img" aria-labelledby="chartTitle chartSubtitle"></svg>
+        <div class="chart-empty" id="chartEmpty" hidden>暂无成绩数据</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 高三成绩趋势 · Personal Academic Dashboard</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
